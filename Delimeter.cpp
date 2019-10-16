@@ -12,11 +12,14 @@ Delimeter::Delimeter()
 {
 
 }
+
+//constructor creates a Delimeter object 
 Delimeter::Delimeter(int lineNum, char symbol)
 {
     this->lineNum = lineNum;
     this->symbol = symbol;
     hasPair = false;
+    //determines what the close symbol is 
     determinePair();
 }
 Delimeter::~Delimeter()
@@ -26,6 +29,7 @@ Delimeter::~Delimeter()
 
 void Delimeter::determinePair()
 {
+    //based of symbol determines what the close symbol is
     if (symbol == '{')
         closeSymbol = '}';
     else if (symbol == '(')
